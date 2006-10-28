@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.we4tech.ideaPlugin.sticky.ui.config.StickyConfigurationUI">
+  <grid id="cbd77" binding="contentPane" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="10" left="10" bottom="10" right="10"/>
+    <constraints>
+      <xy x="48" y="54" width="514" height="297"/>
+      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <grid id="e3588" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <xy x="10" y="10" width="494" height="277"/>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <grid id="78736" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="5" left="5" bottom="5" right="5"/>
+            <constraints>
+              <xy x="0" y="0" width="494" height="30"/>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3"/>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <component id="6c506" class="javax.swing.JLabel">
+                <constraints>
+                  <xy x="5" y="8" width="101" height="14"/>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0"/>
+                </constraints>
+                <properties>
+                  <text value="Sticky configuration "/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <vspacer id="475cb">
+            <constraints>
+              <xy x="241" y="35" width="11" height="42"/>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2"/>
+            </constraints>
+          </vspacer>
+          <tabbedpane id="36db" binding="tabbedPane1">
+            <constraints>
+              <xy x="0" y="77" width="494" height="200"/>
+              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3">
+                <preferred-size width="200" height="200"/>
+              </grid>
+            </constraints>
+            <properties/>
+            <border type="none"/>
+            <children>
+              <grid id="3261" row-count="3" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="5" left="5" bottom="5" right="5"/>
+                <constraints>
+                  <tabbedpane title="Basic configuration"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="521aa" class="javax.swing.JLabel">
+                    <constraints>
+                      <xy x="5" y="10" width="72" height="14"/>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0"/>
+                    </constraints>
+                    <properties>
+                      <text value="Sticky storage"/>
+                    </properties>
+                  </component>
+                  <component id="4b837" class="javax.swing.JTextField" binding="mStickyStorageText">
+                    <constraints>
+                      <xy x="124" y="7" width="300" height="20"/>
+                      <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
+                        <preferred-size width="150" height="-1"/>
+                      </grid>
+                    </constraints>
+                    <properties/>
+                  </component>
+                  <component id="bda8b" class="javax.swing.JLabel">
+                    <constraints>
+                      <xy x="5" y="40" width="109" height="14"/>
+                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0"/>
+                    </constraints>
+                    <properties>
+                      <text value="Address book storage"/>
+                    </properties>
+                  </component>
+                  <component id="d2385" class="javax.swing.JTextField" binding="mAddressBookStorageText">
+                    <constraints>
+                      <xy x="124" y="37" width="300" height="20"/>
+                      <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
+                        <preferred-size width="150" height="-1"/>
+                      </grid>
+                    </constraints>
+                    <properties/>
+                  </component>
+                  <component id="70541" class="javax.swing.JButton" binding="mButtonBrowseStickyStorage">
+                    <constraints>
+                      <xy x="434" y="5" width="49" height="25"/>
+                      <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1"/>
+                    </constraints>
+                    <properties>
+                      <text value="..."/>
+                    </properties>
+                  </component>
+                  <component id="aa5b0" class="javax.swing.JButton" binding="mButtonBrowseStickyAddressBookStorage">
+                    <constraints>
+                      <xy x="434" y="35" width="49" height="25"/>
+                      <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1"/>
+                    </constraints>
+                    <properties>
+                      <text value="..."/>
+                    </properties>
+                  </component>
+                  <vspacer id="d4338">
+                    <constraints>
+                      <xy x="268" y="60" width="11" height="110"/>
+                      <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2"/>
+                    </constraints>
+                  </vspacer>
+                </children>
+              </grid>
+              <grid id="75339" row-count="3" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="5" left="5" bottom="5" right="5"/>
+                <constraints>
+                  <tabbedpane title="Server Configuration"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="a9a51" class="javax.swing.JLabel">
+                    <constraints>
+                      <xy x="5" y="8" width="56" height="14"/>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0"/>
+                    </constraints>
+                    <properties>
+                      <text value="IP Address"/>
+                    </properties>
+                  </component>
+                  <component id="b8521" class="javax.swing.JTextField" binding="mIpAddressText">
+                    <constraints>
+                      <xy x="71" y="5" width="412" height="20"/>
+                      <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
+                        <preferred-size width="150" height="-1"/>
+                      </grid>
+                    </constraints>
+                    <properties/>
+                  </component>
+                  <component id="299a3" class="javax.swing.JLabel">
+                    <constraints>
+                      <xy x="5" y="33" width="24" height="14"/>
+                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0"/>
+                    </constraints>
+                    <properties>
+                      <text value="port"/>
+                    </properties>
+                  </component>
+                  <component id="d8b7a" class="javax.swing.JTextField" binding="mPortText">
+                    <constraints>
+                      <xy x="71" y="30" width="60" height="20"/>
+                      <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
+                        <preferred-size width="150" height="-1"/>
+                        <maximum-size width="60" height="-1"/>
+                      </grid>
+                    </constraints>
+                    <properties/>
+                  </component>
+                  <vspacer id="99568">
+                    <constraints>
+                      <xy x="271" y="50" width="11" height="120"/>
+                      <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2"/>
+                    </constraints>
+                  </vspacer>
+                </children>
+              </grid>
+              <grid id="33a5c" row-count="7" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="5" left="5" bottom="5" right="5"/>
+                <constraints>
+                  <tabbedpane title="Mail Configuration"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <component id="6d188" class="javax.swing.JLabel">
+                    <constraints>
+                      <xy x="5" y="8" width="69" height="14"/>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0"/>
+                    </constraints>
+                    <properties>
+                      <text value="SMTP Host/IP"/>
+                    </properties>
+                  </component>
+                  <component id="65b12" class="javax.swing.JTextField" binding="mSmtpHost">
+                    <constraints>
+                      <xy x="94" y="5" width="389" height="20"/>
+                      <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
+                        <preferred-size width="150" height="-1"/>
+                      </grid>
+                    </constraints>
+                    <properties/>
+                  </component>
+                  <component id="a45b3" class="javax.swing.JLabel">
+                    <constraints>
+                      <xy x="5" y="33" width="53" height="14"/>
+                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0"/>
+                    </constraints>
+                    <properties>
+                      <text value="SMTP Port"/>
+                    </properties>
+                  </component>
+                  <vspacer id="39317">
+                    <constraints>
+                      <xy x="283" y="150" width="11" height="20"/>
+                      <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2"/>
+                    </constraints>
+                  </vspacer>
+                  <component id="609d4" class="javax.swing.JTextField" binding="mSmtpPort">
+                    <constraints>
+                      <xy x="94" y="30" width="60" height="20"/>
+                      <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
+                        <preferred-size width="150" height="-1"/>
+                        <maximum-size width="60" height="-1"/>
+                      </grid>
+                    </constraints>
+                    <properties/>
+                  </component>
+                  <component id="48db" class="javax.swing.JLabel">
+                    <constraints>
+                      <xy x="5" y="133" width="79" height="14"/>
+                      <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0"/>
+                    </constraints>
+                    <properties>
+                      <text value="SMTP Password"/>
+                    </properties>
+                  </component>
+                  <grid id="bc59b" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <xy x="94" y="130" width="389" height="20"/>
+                      <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3"/>
+                    </constraints>
+                    <properties/>
+                    <border type="none"/>
+                    <children>
+                      <component id="1338" class="javax.swing.JLabel">
+                        <constraints>
+                          <xy x="231" y="3" width="158" height="14"/>
+                          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0"/>
+                        </constraints>
+                        <properties>
+                          <text value="Plain text, no encryption is used"/>
+                        </properties>
+                      </component>
+                      <component id="f65e1" class="javax.swing.JPasswordField" binding="mSmtpPassword">
+                        <constraints>
+                          <xy x="0" y="0" width="221" height="20"/>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
+                            <preferred-size width="150" height="-1"/>
+                          </grid>
+                        </constraints>
+                        <properties/>
+                      </component>
+                    </children>
+                  </grid>
+                  <component id="34be0" class="javax.swing.JLabel">
+                    <constraints>
+                      <xy x="5" y="108" width="55" height="14"/>
+                      <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0"/>
+                    </constraints>
+                    <properties>
+                      <text value="SMTP User"/>
+                    </properties>
+                  </component>
+                  <component id="fb3da" class="javax.swing.JTextField" binding="mSmtpUser">
+                    <constraints>
+                      <xy x="94" y="105" width="389" height="20"/>
+                      <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
+                        <preferred-size width="150" height="-1"/>
+                      </grid>
+                    </constraints>
+                    <properties/>
+                  </component>
+                  <component id="e6e45" class="javax.swing.JLabel">
+                    <constraints>
+                      <xy x="94" y="83" width="74" height="14"/>
+                      <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0"/>
+                    </constraints>
+                    <properties>
+                      <text value="Authentication"/>
+                    </properties>
+                  </component>
+                  <component id="eed88" class="javax.swing.JLabel">
+                    <constraints>
+                      <xy x="5" y="58" width="58" height="14"/>
+                      <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0"/>
+                    </constraints>
+                    <properties>
+                      <text value="Mail sender"/>
+                    </properties>
+                  </component>
+                  <component id="eb142" class="javax.swing.JTextField" binding="mMailSenderText">
+                    <constraints>
+                      <xy x="94" y="55" width="389" height="20"/>
+                      <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
+                        <preferred-size width="150" height="-1"/>
+                      </grid>
+                    </constraints>
+                    <properties/>
+                  </component>
+                </children>
+              </grid>
+            </children>
+          </tabbedpane>
+        </children>
+      </grid>
+    </children>
+  </grid>
+</form>

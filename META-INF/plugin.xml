@@ -1,0 +1,185 @@
+<!DOCTYPE idea-plugin PUBLIC "Plugin/DTD" "http://plugins.intellij.net/plugin.dtd">
+<!--
+ $Id: plugin.xml 136 2006-10-06 07:08:22Z i_am_working_on_java $
+ *
+ * Copyright (c) 2006, nhm tanveer hossain khan (hasan)
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without modification,
+ * are permitted provided that the following conditions are met:
+ *
+ *    0 Redistributions of source code must retain the above copyright notice,
+ *      this list of conditions and the following disclaimer.
+ *
+ *    0 Redistributions in binary form must reproduce the above copyright notice,
+ *      this list of conditions and the following disclaimer in the documentation
+ *      and/or other materials provided with the distribution.
+ *
+ *    0 Neither the name of the <ORGANIZATION> nor the names of its contributors
+ *      may be used to endorse or promote products derived from this software without
+ *      specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND
+ * CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+ * INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+ * MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+ * BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY,
+ * OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT
+ * OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+ * OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+ * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY
+ * OF SUCH DAMAGE.
+ ******************************************************************************
+ * $LastChangedBy: i_am_working_on_java $
+ * $LastChangedDate: 2006-10-06 00:08:22 -0700 (Fri, 06 Oct 2006) $
+ * $LastChangedRevision: 136 $
+ ******************************************************************************
+-->
+
+<idea-plugin url="http://hasan.we4tech.com/ideasticky-intellij-idea-plugin/">
+    <name>IDEAStickyPaper</name>
+    <id>IDEAStickyPaper</id>
+    <description><![CDATA[<html><body>
+Sticky Paper!! sound likes everyone know about it. but what about if it is available with in IntelliJ idea !!!.<br/>
+Following features are implemented:                                                                                 <br/>
+
+1. you can minimize Sticky paper.<br/>
+2. you can select a bunch of code and click on "send to sticky" or apply short key to create a new sticky paper.<br/>
+3. share sticky with in your LAN<br/>
+4. send email over Sticky.<br/>
+5. short cut to create/open, hide/minimize or display sticky paper<br/>
+6. Minimize sticky will be stored inside a bottom tab.<br/>
+7. Sticky configuration<br/>
+8. Sticky friend manager<br/>
+9. Automatic sticky location, background color, size, minimize state, content and title will be stored.<br/>
+10. Double click on sticky title it will appear with text field and button (Ajax on swing Huh ;))<br/>
+11. lot more...<br/>
+                    <br/>
+Write down your TODO list within sticky paper. etc...<br/>
+Manage your friend/contact list from sticky friend manager.<br/>
+<br/>
+I bet it will help you to be more productive. :D<br/>
+    </body></html>]]></description>
+    <change-notes><![CDATA[<html><body>
+    <ul>
+    <li>
+    Version - 1.0-2<br/>
+    ------------------------------------------------------------------<br/>
+    1. Project based sticky paper
+        Usages: apply ALT+CTRL+SHIFT+P - view project based sticky papers<br/>
+    2. File linked sticky paper<br/> (it will automatically linked up with open file while it was creating)
+        Usages: apply ALT+CTRL+SHIFT+L - view file linked sticky papers<br/>
+    3. Global Sticky paper<br/>
+    4. Minimize button added on caption bar<br/>
+    5. Collapse and expand button on right top corner<br/>
+    6. Network transmitted sticky can be retransmit to it's sender by pressing "Ctrl+R"<br/>
+    7. Network retransmit status icon on sticky top right corner<br/>
+    <br/>
+    </li>
+    <li>
+    Version - 1.0-1<br/>
+    ------------------------------------------------------------------<br/>
+    1. Sticky preview<br/>
+    using "Alt+ctrl+shift+Next" will popup next sticky<br/>
+    using "ALT+ctrl+shift+Back" will bring previous sticky <br/>
+    using short cut key or menu these task can be performed.    <br/>
+    it is very helpful to rotate through all stickies. similar example could be found in window "Atl+tab"<br/>
+    </li>
+    </ul>
+    </body></html>]]></change-notes>
+
+    <version>1.0-2</version>
+    <idea-version since-build="3000"/>
+    <vendor logo="/resources/sticky_icon.png" email="hasan@somewherein.net" url="http://hasan.we4tech.com">somewhere in...(http://www.somewherein.net)</vendor>
+    <project-components>
+        <component>
+            <implementation-class>com.we4tech.ideaPlugin.sticky.module.MinimizedStickyHolder</implementation-class>
+        </component>
+        <component>
+            <interface-class>com.we4tech.ideaPlugin.sticky.storage.StickyStorageManagerProjectComponent</interface-class>
+            <implementation-class>com.we4tech.ideaPlugin.sticky.storage.impl.StickyStorageManagerProjectComponentImpl</implementation-class>
+        </component>
+    </project-components>
+
+    <application-components>
+        <component>
+            <implementation-class>com.we4tech.ideaPlugin.sticky.module.StickyConfigurationModule</implementation-class>
+        </component>
+
+        <component>
+            <interface-class>com.we4tech.ideaPlugin.sticky.manager.StickyManager</interface-class>
+            <implementation-class>com.we4tech.ideaPlugin.sticky.manager.impl.StickyManagerImpl</implementation-class>
+        </component>
+
+        <component>
+            <interface-class>com.we4tech.ideaPlugin.sticky.storage.GlobalConfiguration</interface-class>
+            <implementation-class>com.we4tech.ideaPlugin.sticky.storage.GlobalConfigurationManager</implementation-class>
+        </component>
+
+        <component>
+            <interface-class>com.we4tech.ideaPlugin.sticky.storage.StickyStorageManagerApplicationComponent</interface-class>
+            <implementation-class>com.we4tech.ideaPlugin.sticky.storage.impl.StickyStorageManagerApplicationComponentImpl</implementation-class>
+        </component>
+        <component>
+            <interface-class>com.we4tech.ideaPlugin.sticky.storage.StickyFriendListStorageManager</interface-class>
+            <implementation-class>com.we4tech.ideaPlugin.sticky.storage.impl.StickyFriendListStorageManagerImpl</implementation-class>
+        </component>
+
+        <component>
+            <interface-class>com.we4tech.ideaPlugin.sticky.network.StickyServer</interface-class>
+            <implementation-class>com.we4tech.ideaPlugin.sticky.network.impl.StickyServerImpl</implementation-class>
+        </component>
+    </application-components>
+
+    <actions>
+        <action class="com.we4tech.ideaPlugin.sticky.action.StickyPluginPopupMenuAction"
+                text="Send to sticky" id="StickyPluginPopupMenuAction" icon="/resources/sticky_add_icon.png">
+            <add-to-group anchor="last" group-id="EditorPopupMenu" />
+        </action>
+        <action class="com.we4tech.ideaPlugin.sticky.action.StickyPluginShowAction"
+                text="Show sticky papers" id="Sticky.show" icon="/resources/sticky_icon.png">
+            <add-to-group anchor="first" group-id="ToolsMenu" />
+            <keyboard-shortcut first-keystroke="control alt shift I" keymap="$default"/>
+        </action>
+        <action class="com.we4tech.ideaPlugin.sticky.action.StickyPluginHideAction"
+                text="Hide sticky papers" id="Sticky.hide" icon="/resources/sticky_icon.png">
+            <add-to-group anchor="first" group-id="ToolsMenu" />
+            <keyboard-shortcut first-keystroke="control alt shift H" keymap="$default"/>
+        </action>
+
+        <action class="com.we4tech.ideaPlugin.sticky.action.StickyPluginNextAction"
+                text="Next sticky &gt;" id="Sticky.next" icon="/resources/sticky_preview.png">
+            <add-to-group anchor="first" group-id="ToolsMenu" />
+            <keyboard-shortcut first-keystroke="control alt shift RIGHT" keymap="$default"/>
+            <add-to-group anchor="last" group-id="EditorPopupMenu" />
+        </action>
+
+        <action class="com.we4tech.ideaPlugin.sticky.action.StickyPluginPreviousAction"
+                text="&lt; Previous sticky" id="Sticky.previous" icon="/resources/sticky_preview.png">
+            <add-to-group anchor="first" group-id="ToolsMenu" />
+            <keyboard-shortcut first-keystroke="control alt shift LEFT" keymap="$default"/>
+            <add-to-group anchor="last" group-id="EditorPopupMenu" />
+        </action>
+
+        <action class="com.we4tech.ideaPlugin.sticky.action.StickyPluginPopupMenuAction"
+                text="Create sticky paper" id="Sticky.new" icon="/resources/sticky_add_icon.png">
+            <add-to-group anchor="first" group-id="ToolsMenu"/>
+            <keyboard-shortcut first-keystroke="control alt shift O" keymap="$default"/>
+        </action>
+        <action class="com.we4tech.ideaPlugin.sticky.action.PsiOpenFileStickyAction"
+                text="Open Linked stickies" id="Sticky.openLinked"
+                icon="/resources/sticky_linked.png">
+            <add-to-group anchor="first" group-id="ToolsMenu"/>
+            <keyboard-shortcut first-keystroke="control alt shift L" keymap="$default"/>
+        </action>
+        <action id="Sticky.LoadProjectSpecificSticky" class="com.we4tech.ideaPlugin.sticky.action.StickyPluginLoadProjectSpecificStickyAction"
+                text="Load project sticky" description="Loading project specific sticky papers"
+                icon="/resources/sticky_project.png">
+            <keyboard-shortcut keymap="$default" first-keystroke="shift ctrl alt P"/>
+            <add-to-group group-id="ToolsMenu" anchor="first" />
+        </action>
+    </actions>
+
+</idea-plugin>

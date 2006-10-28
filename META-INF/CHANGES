@@ -1,0 +1,21 @@
+$Id: CHANGES 125 2006-10-02 21:06:42Z  $
+Version - 1.0-2
+------------------------------------------------------------------
+1. Project based sticky paper
+	Usages: apply ALT+CTRL+SHIFT+P - view project based sticky papers
+2. File linked sticky paper (it will automatically linked up with open file while it was creating)
+	Usages: apply ALT+CTRL+SHIFT+L - view file linked sticky papers
+3. Global Sticky paper
+4. Minimize button added on caption bar
+5. Collapse and expand button on right top corner
+6. Network transmitted sticky can be retransmit to it's sender by pressing "Ctrl+R"
+7. Network retransmit status icon on sticky top right corner
+
+
+Version - 1.0-1
+------------------------------------------------------------------
+1. Sticky preview
+using "Alt+ctrl+shift+Next" will popup next sticky
+using "ALT+ctrl+shift+Back" will bring previous sticky 
+using short cut key or menu these task can be performed.    
+it is very helpful to rotate through all stickies. similar example could be found in window "Atl+tab"
